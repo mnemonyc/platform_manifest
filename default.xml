@@ -70,6 +70,7 @@
   <project path="device/moto/shamu-kernel" name="device/moto/shamu-kernel" groups="device,shamu,broadcom_pdk" clone-depth="1" />
   <project path="device/sample" name="device/sample" groups="pdk" />
 
+  <project path="device/qcom/common" name="mnemonyc/android_device_qcom_common" remote="mnemonyc" />
   <project path="device/zuk/z2plus" name="mnemonyc/android_device_zuk_z2plus" remote="mnemonyc" />
 
   <project path="docs/source.android.com" name="platform/docs/source.android.com" groups="pdk-cw-fs,pdk-fs" />
