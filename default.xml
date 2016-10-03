@@ -3,6 +3,11 @@
 
   <remote  name="aosp"
            fetch=".." />
+
+  <remote  name="mnemonyc"
+           fetch="https://github.com"
+           revision="refs/heads/aosp-N-legacy" />
+          
   <default revision="refs/tags/android-7.0.0_r6"
            remote="aosp"
            sync-j="4" />
@@ -16,6 +21,8 @@
     <linkfile src="root.bp" dest="Android.bp" />
     <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
   </project>
+  <project path="manifest" name="mnemonyc/platform_manifest" groups="pdk" remote="mnemonyc" />
+
   <project path="abi/cpp" name="platform/abi/cpp" groups="pdk" />
   <project path="art" name="platform/art" groups="pdk" />
   <project path="bionic" name="platform/bionic" groups="pdk" />
