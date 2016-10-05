@@ -25,7 +25,7 @@
 
   <project path="abi/cpp" name="platform/abi/cpp" groups="pdk" />
   <project path="art" name="platform/art" groups="pdk" />
-  <project path="bionic" name="platform/bionic" groups="pdk" />
+  <project path="bionic" name="mnemonyc/platform_bionic" groups="pdk" remote="mnemonyc" />
   <project path="bootable/recovery" name="platform/bootable/recovery" groups="pdk" />
   <project path="cts" name="platform/cts" groups="cts,pdk-cw-fs,pdk-fs" />
   <project path="dalvik" name="platform/dalvik" groups="pdk-cw-fs,pdk-fs" />
@@ -62,6 +62,7 @@
 
   <project path="device/qcom/common" name="mnemonyc/android_device_qcom_common" remote="mnemonyc" />
   <project path="device/zuk/z2plus" name="mnemonyc/android_device_zuk_z2plus" remote="mnemonyc" />
+  <project path="kernel/zuk/msm8996" name="mnemonyc/android_kernel_zuk_msm8996" remote="mnemonyc" />
 
   <project path="docs/source.android.com" name="platform/docs/source.android.com" groups="pdk-cw-fs,pdk-fs" />
   <project path="external/aac" name="platform/external/aac" groups="pdk" />
@@ -536,5 +537,7 @@
 
   <project path="vendor/aosp" nane="mnemonyc/platform_vendor_aosp" remote="mnemonyc" />
   <project path="vendor/qcom/opensource/dataservices" nane="mnemonyc/android_vendor_qcom_opensource_dataservices" remote="mnemonyc" />
+  <project path="vendor/qcom" nane="mnemonyc/proprietary_vendor_qcom" remote="mnemonyc" />
+  <project path="vendor/zuk" nane="mnemonyc/proprietary_vendor_zuk" remote="mnemonyc" />
 
 </manifest>
