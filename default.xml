@@ -5,16 +5,39 @@
            fetch=".." />
 
   <remote  name="mnemonyc"
-           fetch="https://github.com"
-           revision="refs/heads/aosp-N-legacy" />
+           fetch="https://github.com" />
           
   <default revision="refs/tags/android-7.0.0_r14"
            remote="aosp"
            sync-j="4" />
 
-  <project path="build" name="mnemonyc/platform_build" groups="pdk,tradefed" remote="mnemonyc" >
+  <!-- mnemonyc repos -->
+
+  <project path="build" name="mnemonyc/platform_build" groups="pdk,tradefed" remote="mnemonyc" revision="aosp-N-legacy" >
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
+  <project path="bionic" name="mnemonyc/platform_bionic" groups="pdk" remote="mnemonyc" revision="aosp-N-legacy" />
+  <project path="device/qcom/common" name="mnemonyc/android_device_qcom_common" remote="mnemonyc" revision="aosp-N-legacy" />
+  <project path="device/qcom/sepolicy" name="mnemonyc/android_device_qcom_sepolicy" remote="mnemonyc" revision="aosp-N-legacy" />
+  <project path="device/zuk/z2plus" name="mnemonyc/android_device_zuk_z2plus" remote="mnemonyc" revision="aosp-N-legacy" />
+  <project path="kernel/zuk/msm8996" name="mnemonyc/android_kernel_zuk_msm8996" remote="mnemonyc" revision="aosp-N-legacy" />
+  <project path="external/boringssl-compat" name="mnemonyc/android_external_sony_boringssl-compat" groups="pdk" remote="mnemonyc" revision="aosp-N-legacy" />
+  <project path="external/libnfc-nci" name="mnemonyc/platform_external_libnfc-nci" groups="pdk" remote="mnemonyc" revision="aosp-N-legacy" />
+  <project path="hardware/qcom/audio/msm8996" name="mnemonyc/platform_hardware_qcom_audio" groups="qcom,qcom_audio" remote="mnemonyc" revision="aosp-N-legacy" />
+  <project path="hardware/qcom/bt" name="mnemonyc/platform_hardware_qcom_bt" groups="qcom" remote="mnemonyc" revision="aosp-N-legacy" />
+  <project path="hardware/qcom/display/msm8996" name="mnemonyc/android_hardware_qcom_display" groups="pdk,qcom,qcom_display" remote="mnemonyc" revision="aosp-N-legacy" />
+  <project path="hardware/qcom/media/msm8996" name="mnemonyc/android_hardware_qcom_media" groups="qcom" remote="mnemonyc" revision="aosp-N-legacy" />
+  <project path="hardware/qcom/wlan" name="mnemonyc/platform_hardware_qcom_wlan" groups="qcom_wlan" remote="mnemonyc" revision="aosp-N-legacy" />
+  <project path="system/core" name="mnemonyc/platform_system_core" groups="pdk" remote="mnemonyc" revision="aosp-N-legacy" />
+  <project path="system/vold" name="mnemonyc/platform_system_vold" groups="pdk" remote="mnemonyc" revision="aosp-N-legacy" />
+  <project path="vendor/aosp" nane="mnemonyc/platform_vendor_aosp" remote="mnemonyc" revision="aosp-N-legacy" />
+  <project path="vendor/qcom/opensource/dataservices" nane="mnemonyc/android_vendor_qcom_opensource_dataservices" remote="mnemonyc" revision="aosp-N-legacy" />
+  <project path="vendor/qcom" nane="mnemonyc/proprietary_vendor_qcom" remote="mnemonyc" revision="aosp-N-legacy" />
+  <project path="vendor/zuk" nane="mnemonyc/proprietary_vendor_zuk" remote="mnemonyc" revision="aosp-N-legacy" />
+
+  
+  <!-- AOSP repos -->
+
   <project path="build/blueprint" name="platform/build/blueprint" groups="pdk,tradefed" />
   <project path="build/kati" name="platform/build/kati" groups="pdk,tradefed" />
   <project path="build/soong" name="platform/build/soong" groups="pdk,tradefed" >
@@ -23,7 +46,6 @@
   </project>
   <project path="abi/cpp" name="platform/abi/cpp" groups="pdk" />
   <project path="art" name="platform/art" groups="pdk" />
-  <project path="bionic" name="mnemonyc/platform_bionic" groups="pdk" remote="mnemonyc" />
   <project path="bootable/recovery" name="platform/bootable/recovery" groups="pdk" />
   <project path="cts" name="platform/cts" groups="cts,pdk-cw-fs,pdk-fs" />
   <project path="dalvik" name="platform/dalvik" groups="pdk-cw-fs,pdk-fs" />
@@ -57,12 +79,6 @@
   <project path="device/linaro/hikey" name="device/linaro/hikey" />
   <project path="device/linaro/hikey-kernel" name="device/linaro/hikey-kernel" />
   <project path="device/sample" name="device/sample" groups="pdk" />
-
-  <project path="device/qcom/common" name="mnemonyc/android_device_qcom_common" remote="mnemonyc" />
-  <project path="device/qcom/sepolicy" name="mnemonyc/android_device_qcom_sepolicy" remote="mnemonyc" />
-  <project path="device/zuk/z2plus" name="mnemonyc/android_device_zuk_z2plus" remote="mnemonyc" />
-  <project path="kernel/zuk/msm8996" name="mnemonyc/android_kernel_zuk_msm8996" remote="mnemonyc" />
-
   <project path="docs/source.android.com" name="platform/docs/source.android.com" groups="pdk-cw-fs,pdk-fs" />
   <project path="external/aac" name="platform/external/aac" groups="pdk" />
   <project path="external/adt-infra" name="platform/external/adt-infra" groups="adt-infra,notdefault" />
@@ -80,7 +96,6 @@
   <project path="external/bison" name="platform/external/bison" groups="pdk" />
   <project path="external/blktrace" name="platform/external/blktrace" groups="pdk-cw-fs,pdk-fs" />
   <project path="external/boringssl" name="platform/external/boringssl" groups="pdk" />
-  <project path="external/boringssl-compat" name="mnemonyc/android_external_sony_boringssl-compat" groups="pdk" remote="mnemonyc" />
   <project path="external/bouncycastle" name="platform/external/bouncycastle" groups="pdk" />
   <project path="external/bsdiff" name="platform/external/bsdiff" groups="pdk" />
   <project path="external/bzip2" name="platform/external/bzip2" groups="pdk" />
@@ -193,7 +208,6 @@
   <project path="external/libmicrohttpd" name="platform/external/libmicrohttpd" />
   <project path="external/libmpeg2" name="platform/external/libmpeg2" groups="pdk" />
   <project path="external/libmtp" name="platform/external/libmtp" groups="pdk-cw-fs,pdk-fs" />
-  <project path="external/libnfc-nci" name="mnemonyc/platform_external_libnfc-nci" groups="pdk" remote="mnemonyc" />
   <project path="external/libnfc-nxp" name="platform/external/libnfc-nxp" groups="pdk" />
   <project path="external/libnl" name="platform/external/libnl" groups="pdk" />
   <project path="external/libogg" name="platform/external/libogg" groups="pdk" />
@@ -365,14 +379,10 @@
   <project path="hardware/libhardware" name="platform/hardware/libhardware" groups="pdk" />
   <project path="hardware/libhardware_legacy" name="platform/hardware/libhardware_legacy" groups="pdk" />
   <project path="hardware/marvell/bt" name="platform/hardware/marvell/bt" groups="marvell_bt" />
-  <project path="hardware/qcom/audio/msm8996" name="mnemonyc/platform_hardware_qcom_audio" groups="qcom,qcom_audio" remote="mnemonyc" />
   <project path="hardware/qcom/bootctrl" name="platform/hardware/qcom/bootctrl" groups="pdk" />
-  <project path="hardware/qcom/bt" name="mnemonyc/platform_hardware_qcom_bt" groups="qcom" remote="mnemonyc" />
   <project path="hardware/qcom/camera" name="platform/hardware/qcom/camera" groups="qcom" />
-  <project path="hardware/qcom/display/msm8996" name="mnemonyc/android_hardware_qcom_display" groups="pdk,qcom,qcom_display" remote="mnemonyc" />
   <project path="hardware/qcom/gps" name="platform/hardware/qcom/gps" groups="qcom,qcom_gps" />
   <project path="hardware/qcom/keymaster" name="platform/hardware/qcom/keymaster" groups="qcom,qcom_keymaster" />
-  <project path="hardware/qcom/media/msm8996" name="mnemonyc/android_hardware_qcom_media" groups="qcom" remote="mnemonyc" />
   <project path="hardware/qcom/msm8960" name="platform/hardware/qcom/msm8960" groups="qcom_msm8960" />
   <project path="hardware/qcom/msm8994" name="platform/hardware/qcom/msm8994" groups="qcom_msm8994" />
   <project path="hardware/qcom/msm8996" name="platform/hardware/qcom/msm8996" groups="qcom_msm8996" />
@@ -380,7 +390,6 @@
   <project path="hardware/qcom/msm8x27" name="platform/hardware/qcom/msm8x27" groups="qcom_msm8x27" />
   <project path="hardware/qcom/msm8x84" name="platform/hardware/qcom/msm8x84" groups="qcom_msm8x84" />
   <project path="hardware/qcom/power" name="platform/hardware/qcom/power" groups="qcom" />
-  <project path="hardware/qcom/wlan" name="mnemonyc/platform_hardware_qcom_wlan" groups="qcom_wlan" remote="mnemonyc" />
   <project path="hardware/ril" name="platform/hardware/ril" groups="pdk" />
   <project path="hardware/ti/omap3" name="platform/hardware/ti/omap3" groups="omap3" />
   <project path="hardware/ti/omap4-aah" name="platform/hardware/ti/omap4-aah" groups="omap4-aah" />
@@ -503,7 +512,6 @@
   <project path="system/connectivity/apmanager" name="platform/system/connectivity/apmanager" />
   <project path="system/connectivity/dhcp_client" name="platform/system/connectivity/dhcp_client" />
   <project path="system/connectivity/shill" name="platform/system/connectivity/shill" />
-  <project path="system/core" name="mnemonyc/platform_system_core" groups="pdk" remote="mnemonyc" />
   <project path="system/extras" name="platform/system/extras" groups="pdk" />
   <project path="system/firewalld" name="platform/system/firewalld" />
   <project path="system/gatekeeper" name="platform/system/gatekeeper" groups="pdk" />
@@ -517,7 +525,6 @@
   <project path="system/tools/aidl" name="platform/system/tools/aidl" groups="pdk-cw-fs,pdk-fs" />
   <project path="system/tpm" name="platform/system/tpm" />
   <project path="system/update_engine" name="platform/system/update_engine" />
-  <project path="system/vold" name="mnemonyc/platform_system_vold" groups="pdk" remote="mnemonyc" />
   <project path="system/weaved" name="platform/system/weaved" />
   <project path="system/webservd" name="platform/system/webservd" />
   <project path="toolchain/binutils" name="toolchain/binutils" />
@@ -533,10 +540,5 @@
   <project path="tools/swt" name="platform/tools/swt" groups="notdefault,tools" />
   <project path="tools/test/connectivity" name="platform/tools/test/connectivity" />
   <project path="tools/tradefederation" name="platform/tools/tradefederation" groups="notdefault,tradefed" />
-
-  <project path="vendor/aosp" nane="mnemonyc/platform_vendor_aosp" remote="mnemonyc" />
-  <project path="vendor/qcom/opensource/dataservices" nane="mnemonyc/android_vendor_qcom_opensource_dataservices" remote="mnemonyc" />
-  <project path="vendor/qcom" nane="mnemonyc/proprietary_vendor_qcom" remote="mnemonyc" />
-  <project path="vendor/zuk" nane="mnemonyc/proprietary_vendor_zuk" remote="mnemonyc" />
 
 </manifest>
