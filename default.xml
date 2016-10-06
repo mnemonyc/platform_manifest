@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
   <remote  name="aosp"
-           fetch=".." >
+           fetch="https://android.googlesource.com"
+           review="android-review.googlesource.com" >
 
   <remote  name="github"
            fetch=".." />
@@ -27,10 +28,10 @@
   <project path="hardware/qcom/wlan" name="mnemonyc/platform_hardware_qcom_wlan" groups="qcom_wlan" remote="github" revision="aosp-N-legacy" />
   <project path="system/core" name="mnemonyc/platform_system_core" groups="pdk" remote="github" revision="aosp-N-legacy" />
   <project path="system/vold" name="mnemonyc/platform_system_vold" groups="pdk" remote="github" revision="aosp-N-legacy" />
-  <project path="vendor/aosp" nane="mnemonyc/platform_vendor_aosp" remote="github" revision="aosp-N-legacy" />
-  <project path="vendor/qcom/opensource/dataservices" nane="mnemonyc/android_vendor_qcom_opensource_dataservices" remote="github" revision="aosp-N-legacy" />
-  <project path="vendor/qcom" nane="mnemonyc/proprietary_vendor_qcom" remote="github" revision="aosp-N-legacy" />
-  <project path="vendor/zuk" nane="mnemonyc/proprietary_vendor_zuk" remote="github" revision="aosp-N-legacy" />
+  <project path="vendor/aosp" name="mnemonyc/platform_vendor_aosp" remote="github" revision="aosp-N-legacy" />
+  <project path="vendor/qcom/opensource/dataservices" name="mnemonyc/android_vendor_qcom_opensource_dataservices" remote="github" revision="aosp-N-legacy" />
+  <project path="vendor/qcom" name="mnemonyc/proprietary_vendor_qcom" remote="github" revision="aosp-N-legacy" />
+  <project path="vendor/zuk" name="mnemonyc/proprietary_vendor_zuk" remote="github" revision="aosp-N-legacy" />
 
 <!-- AOSP repos -->
   <project path="build/blueprint" name="platform/build/blueprint" groups="pdk,tradefed" />
