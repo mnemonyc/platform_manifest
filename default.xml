@@ -2,38 +2,40 @@
 <manifest>
 
   <remote  name="aosp"
-           fetch=".." />
+           fetch="https://android.googlesource.com"
+           review="android-review.googlesource.com" />
 
-  <remote  name="mnemonyc"
-           fetch="https://github.com" />
+  <remote  name="github"
+           fetch=".." />
           
   <default revision="refs/tags/android-7.0.0_r14"
            remote="aosp"
+           sync-c="true"
            sync-j="4" />
 
   <!-- mnemonyc repos -->
 
-  <project path="build" name="mnemonyc/platform_build" groups="pdk,tradefed" remote="mnemonyc" revision="aosp-N-legacy" >
+  <project path="build" name="mnemonyc/platform_build" groups="pdk,tradefed" remote="github" revision="aosp-N-legacy" >
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
-  <project path="bionic" name="mnemonyc/platform_bionic" groups="pdk" remote="mnemonyc" revision="aosp-N-legacy" />
-  <project path="device/qcom/common" name="mnemonyc/android_device_qcom_common" remote="mnemonyc" revision="aosp-N-legacy" />
-  <project path="device/qcom/sepolicy" name="mnemonyc/android_device_qcom_sepolicy" remote="mnemonyc" revision="aosp-N-legacy" />
-  <project path="device/zuk/z2plus" name="mnemonyc/android_device_zuk_z2plus" remote="mnemonyc" revision="aosp-N-legacy" />
-  <project path="kernel/zuk/msm8996" name="mnemonyc/android_kernel_zuk_msm8996" remote="mnemonyc" revision="aosp-N-legacy" />
-  <project path="external/boringssl-compat" name="mnemonyc/android_external_sony_boringssl-compat" groups="pdk" remote="mnemonyc" revision="aosp-N-legacy" />
-  <project path="external/libnfc-nci" name="mnemonyc/platform_external_libnfc-nci" groups="pdk" remote="mnemonyc" revision="aosp-N-legacy" />
-  <project path="hardware/qcom/audio/msm8996" name="mnemonyc/platform_hardware_qcom_audio" groups="qcom,qcom_audio" remote="mnemonyc" revision="aosp-N-legacy" />
-  <project path="hardware/qcom/bt" name="mnemonyc/platform_hardware_qcom_bt" groups="qcom" remote="mnemonyc" revision="aosp-N-legacy" />
-  <project path="hardware/qcom/display/msm8996" name="mnemonyc/android_hardware_qcom_display" groups="pdk,qcom,qcom_display" remote="mnemonyc" revision="aosp-N-legacy" />
-  <project path="hardware/qcom/media/msm8996" name="mnemonyc/android_hardware_qcom_media" groups="qcom" remote="mnemonyc" revision="aosp-N-legacy" />
-  <project path="hardware/qcom/wlan" name="mnemonyc/platform_hardware_qcom_wlan" groups="qcom_wlan" remote="mnemonyc" revision="aosp-N-legacy" />
-  <project path="system/core" name="mnemonyc/platform_system_core" groups="pdk" remote="mnemonyc" revision="aosp-N-legacy" />
-  <project path="system/vold" name="mnemonyc/platform_system_vold" groups="pdk" remote="mnemonyc" revision="aosp-N-legacy" />
-  <project path="vendor/aosp" nane="mnemonyc/platform_vendor_aosp" remote="mnemonyc" revision="aosp-N-legacy" />
-  <project path="vendor/qcom/opensource/dataservices" nane="mnemonyc/android_vendor_qcom_opensource_dataservices" remote="mnemonyc" revision="aosp-N-legacy" />
-  <project path="vendor/qcom" nane="mnemonyc/proprietary_vendor_qcom" remote="mnemonyc" revision="aosp-N-legacy" />
-  <project path="vendor/zuk" nane="mnemonyc/proprietary_vendor_zuk" remote="mnemonyc" revision="aosp-N-legacy" />
+  <project path="bionic" name="mnemonyc/platform_bionic" groups="pdk" remote="github" revision="aosp-N-legacy" />
+  <project path="device/qcom/common" name="mnemonyc/android_device_qcom_common" remote="github" revision="aosp-N-legacy" />
+  <project path="device/qcom/sepolicy" name="mnemonyc/android_device_qcom_sepolicy" remote="github" revision="aosp-N-legacy" />
+  <project path="device/zuk/z2plus" name="mnemonyc/android_device_zuk_z2plus" remote="github" revision="aosp-N-legacy" />
+  <project path="kernel/zuk/msm8996" name="mnemonyc/android_kernel_zuk_msm8996" remote="github" revision="aosp-N-legacy" />
+  <project path="external/boringssl-compat" name="mnemonyc/android_external_sony_boringssl-compat" groups="pdk" remote="github" revision="aosp-N-legacy" />
+  <project path="external/libnfc-nci" name="mnemonyc/platform_external_libnfc-nci" groups="pdk" remote="github" revision="aosp-N-legacy" />
+  <project path="hardware/qcom/audio/msm8996" name="mnemonyc/platform_hardware_qcom_audio" groups="qcom,qcom_audio" remote="github" revision="aosp-N-legacy" />
+  <project path="hardware/qcom/bt" name="mnemonyc/platform_hardware_qcom_bt" groups="qcom" remote="github" revision="aosp-N-legacy" />
+  <project path="hardware/qcom/display/msm8996" name="mnemonyc/android_hardware_qcom_display" groups="pdk,qcom,qcom_display" remote="github" revision="aosp-N-legacy" />
+  <project path="hardware/qcom/media/msm8996" name="mnemonyc/android_hardware_qcom_media" groups="qcom" remote="github" revision="aosp-N-legacy" />
+  <project path="hardware/qcom/wlan" name="mnemonyc/platform_hardware_qcom_wlan" groups="qcom_wlan" remote="github" revision="aosp-N-legacy" />
+  <project path="system/core" name="mnemonyc/platform_system_core" groups="pdk" remote="github" revision="aosp-N-legacy" />
+  <project path="system/vold" name="mnemonyc/platform_system_vold" groups="pdk" remote="github" revision="aosp-N-legacy" />
+  <project path="vendor/aosp" nane="mnemonyc/platform_vendor_aosp" remote="github" revision="aosp-N-legacy" />
+  <project path="vendor/qcom/opensource/dataservices" nane="mnemonyc/android_vendor_qcom_opensource_dataservices" remote="github" revision="aosp-N-legacy" />
+  <project path="vendor/qcom" nane="mnemonyc/proprietary_vendor_qcom" remote="github" revision="aosp-N-legacy" />
+  <project path="vendor/zuk" nane="mnemonyc/proprietary_vendor_zuk" remote="github" revision="aosp-N-legacy" />
 
   
   <!-- AOSP repos -->
