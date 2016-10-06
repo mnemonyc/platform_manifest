@@ -6,7 +6,7 @@
 
   <remote  name="mnemonyc"
            fetch="https://github.com"
-           revision="aosp-N-legacy" />
+           revision="refs/heads/aosp-N-legacy" />
           
   <default revision="refs/tags/android-7.0.0_r14"
            remote="aosp"
@@ -15,14 +15,12 @@
   <project path="build" name="mnemonyc/platform_build" groups="pdk,tradefed" remote="mnemonyc" >
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
-  <!--project path="build/blueprint" name="platform/build/blueprint" groups="pdk,tradefed" />
+  <project path="build/blueprint" name="platform/build/blueprint" groups="pdk,tradefed" />
   <project path="build/kati" name="platform/build/kati" groups="pdk,tradefed" />
   <project path="build/soong" name="platform/build/soong" groups="pdk,tradefed" >
     <linkfile src="root.bp" dest="Android.bp" />
     <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
-  </project-->
-  <project path="manifests" name="mnemonyc/platform_manifest" groups="pdk" remote="mnemonyc" />
-
+  </project>
   <project path="abi/cpp" name="platform/abi/cpp" groups="pdk" />
   <project path="art" name="platform/art" groups="pdk" />
   <project path="bionic" name="mnemonyc/platform_bionic" groups="pdk" remote="mnemonyc" />
