@@ -6,7 +6,7 @@
 
   <remote  name="mnemonyc"
            fetch="https://github.com"
-           revision="refs/heads/aosp-N-legacy" />
+           revision="aosp-N-legacy" />
           
   <default revision="refs/tags/android-7.0.0_r14"
            remote="aosp"
