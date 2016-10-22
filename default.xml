@@ -20,6 +20,7 @@
   <project path="device/qcom/sepolicy" name="mnemonyc/android_device_qcom_sepolicy" remote="github" revision="aosp-N-legacy" />
   <project path="device/zuk/z2plus" name="mnemonyc/android_device_zuk_z2plus" remote="github" revision="aosp-N-legacy" />
   <project path="kernel/zuk/msm8996" name="mnemonyc/android_kernel_zuk_msm8996" remote="github" revision="aosp-N-legacy" />
+  <project path="external/ant-wireless/antradio-library" name="mnemonyc/platform_external_ant-wireless_antradio-library " remote="github" revision="aosp-N-legacy" />
   <project path="external/libnfc-nci" name="mnemonyc/platform_external_libnfc-nci" groups="pdk" remote="github" revision="aosp-N-legacy" />
   <project path="frameworks/native" name="mnemonyc/platform_frameworks_native" groups="pdk" remote="github" revision="aosp-N-legacy" />
   <project path="hardware/qcom/audio/msm8996" name="mnemonyc/platform_hardware_qcom_audio" groups="qcom,qcom_audio" remote="github" revision="aosp-N-legacy" />
