@@ -22,6 +22,8 @@
   <project path="kernel/zuk/msm8996" name="mnemonyc/android_kernel_zuk_msm8996" remote="github" revision="aosp-N-legacy" />
   <project path="external/ant-wireless/antradio-library" name="mnemonyc/platform_external_ant-wireless_antradio-library" remote="github" revision="aosp-N-legacy" />
   <project path="external/libchrome" name="mnemonyc/platform_external_libchrome" remote="github" revision="aosp-N-legacy" />
+  <project path="external/libnetfilter_conntrack" name="mnemonyc/android_external_libnetfilter_conntrack" remote="github" revision="aosp-N-legacy" />
+  <project path="external/libnfnetlink" name="mnemonyc/android_external_libnfnetlink" remote="github" revision="aosp-N-legacy" />
   <project path="external/libnfc-nci" name="mnemonyc/platform_external_libnfc-nci" groups="pdk" remote="github" revision="aosp-N-legacy" />
   <project path="frameworks/native" name="mnemonyc/platform_frameworks_native" groups="pdk" remote="github" revision="aosp-N-legacy" />
   <project path="hardware/qcom/audio/msm8996" name="mnemonyc/platform_hardware_qcom_audio" groups="qcom,qcom_audio" remote="github" revision="aosp-N-legacy" />
